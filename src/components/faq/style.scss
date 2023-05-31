@@ -1,0 +1,22 @@
+@import '../../style/colors.scss';
+@import '../../style/mixins.scss';
+
+.faq {
+    @include margin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+
+    &__title {
+        @include h1-bold;
+    }
+
+    &__container {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: center;
+    }
+}

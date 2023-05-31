@@ -1,0 +1,100 @@
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.footer {
+    @include box-shadow;
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-white;
+    border-radius: 90px 90px 0 0;
+    padding: 50px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 850px) {
+            flex-wrap: wrap;
+        }
+
+        &__meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: $text-black-second;
+
+            &__title {
+                @include h3-bold;
+                margin-bottom: 30px;
+                font-weight: 700;
+            }
+
+            &__firm {
+                @include h3-normal;
+                margin-bottom: 16px;
+            }
+
+            &__contacts {
+                @include h3-normal;
+                text-decoration: underline;
+                margin-bottom: 16px;
+            }
+
+            &__adress {
+                @include h3-normal;
+                color: $text-grey;
+            }
+
+            &__icons {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                gap: 20px
+            }
+
+            &__licens {
+                width: 81px;
+                height: 110px;
+                background-color: #D9D9D9;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+
+        &__rules {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 740px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            &__content {
+                @include h5-normal;
+                color: $text-grey;
+            }
+        }
+
+        &__inn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 40px;
+            margin-top: 22px;
+
+            &__data {
+                @include h5-normal;
+                color: $text-grey;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../style/colors.scss';
+@import '../../style/mixins.scss';
+
+.btn__study {
+    @include margin;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+
+    @media(max-width: 880px) {
+        flex-direction: column;
+    }
+
+    &__begin {
+        @include h2-normal;
+        background-color: $accent;
+        color: $secondary-white;
+        width: calc((100% - 120px)/2);
+        height: 133px;
+        border-radius: 90px;
+        border: 1px solid $accent;
+
+        &:hover {
+            background-color: $secondary-dark;
+            border-color: $secondary-dark;
+        }
+    }
+
+    &__go {
+        @include h2-normal;
+        background-color: inherit;
+        color: $text-black-first;
+        width: calc((100% - 120px)/2);
+        height: 133px;
+        border-radius: 90px;
+        border: 1px solid $accent;
+
+        &:hover {
+            background-color: $accent;
+        }
+    }
+}

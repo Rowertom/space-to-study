@@ -1,0 +1,61 @@
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.header {
+    @include margin;
+    @include box-shadow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $secondary-white;
+    padding: 0 50px;
+    height: 100px;
+    border-radius: 100px;
+
+    @media (max-width: 850px) {
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    &__menu {
+        @include h3-normal;
+        color: $text-black-second;
+        display: flex;
+        align-items: center;
+        gap: 64px;
+
+        @media (max-width: 740px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__btn {
+            padding: 5px 10px;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 2px solid $accent;
+            }
+        }
+    }
+
+    &__btn {
+        background-color: inherit;
+        @include h3-normal;
+        color: $text-black-second;
+        padding: 10px 20px;
+        border: 1px solid $text-black-second;
+        border-radius: 27px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $accent;
+            border-color: $accent;
+            color: $secondary-white;
+        }
+
+
+    }
+}

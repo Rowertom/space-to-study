@@ -1,0 +1,94 @@
+@import "../../style/colors.scss";
+@import "../../style/mixins.scss";
+
+.banner {
+    @include margin;
+    @include box-shadow;
+    display: flex;
+    color: $secondary-dark;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-white;
+    border-radius: 90px;
+    padding: 50px;
+
+    &__title {
+        @include h1-bold;
+        text-align: center;
+
+        @media (max-width: 740px) {
+            @include h2-bold;
+            font-weight: 700;
+        }
+    }
+
+    &__date {
+        @include h1-normal;
+        text-align: center;
+
+        @media (max-width: 740px) {
+            @include h2-bold;
+        }
+
+        &__before {
+            border-bottom: 2px solid $accent;
+        }
+    }
+
+    &__formula {
+        @include box-shadow;
+        @include h1-normal;
+        padding: 0 100px;
+        border-radius: 100px;
+        background-color: $secondary-light;
+        margin-top: 35px;
+    }
+
+    &__explain {
+        @include h2-normal;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__btn {
+        display: flex;
+        gap: 20px;
+
+        @media (max-width: 850px) {
+            flex-direction: column;
+        }
+
+        &__more {
+            @include h3-normal;
+            color: $secondary-dark;
+            background-color: inherit;
+            height: 70px;
+            width: 294px;
+            border-radius: 60px;
+            border: 1px solid $accent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $accent;
+                color: $secondary-white;
+            }
+        }
+
+        &__buy {
+            @include h3-normal;
+            color: $secondary-white;
+            background-color: $accent;
+            height: 70px;
+            width: 294px;
+            border-radius: 60px;
+            border: 1px solid $accent;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $secondary-dark;
+                background-color: $secondary-dark;
+            }
+        }
+    }
+}
